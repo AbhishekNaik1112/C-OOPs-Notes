@@ -1,0 +1,183 @@
+1. **What is Object-Oriented Programming?**
+   - **Answer:** Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which can contain data and methods. It emphasizes the use of classes and objects and promotes reusability, modularity, and encapsulation.
+
+2. **What are the main principles of OOP?**
+   - **Answer:** The main principles of OOP are Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
+3. **Can you explain the concept of a class and an object?**
+   - **Answer:** A class is a blueprint for creating objects. It defines a type of object according to the data it holds and the operations that can be performed on it. An object is an instance of a class, representing a specific entity that has attributes and behaviors defined by its class.
+
+4. **What is the difference between a class and an object?**
+   - **Answer:** A class is a template or blueprint from which objects are created. It defines properties and methods. An object is an instance of a class, with actual values and functionalities.
+
+### Classes and Objects
+
+5. **How do you define a class in C++?**
+   - **Answer:** A class in C++ is defined using the `class` keyword followed by the class name and a body enclosed in curly braces.
+     ```cpp
+     class ClassName {
+     private:
+         int data;
+     public:
+         void display() {
+             std::cout << data << std::endl;
+         }
+     };
+     ```
+
+6. **How do you create an object of a class in C++?**
+   - **Answer:** An object of a class is created by declaring it like a regular variable.
+     ```cpp
+     ClassName obj;
+     ```
+
+7. **What is a constructor?**
+   - **Answer:** A constructor is a special member function of a class that initializes objects of the class. It has the same name as the class and no return type.
+
+8. **What is a destructor?**
+   - **Answer:** A destructor is a special member function of a class that is called when an object is destroyed. It has the same name as the class, preceded by a tilde (`~`), and no return type.
+
+9. **Can you explain the purpose of constructors and destructors?**
+   - **Answer:** Constructors are used to initialize objects when they are created, setting initial values or allocating resources. Destructors are used to clean up resources when an object is destroyed.
+
+10. **What is the difference between a default constructor and a parameterized constructor?**
+    - **Answer:** A default constructor takes no arguments and initializes objects with default values. A parameterized constructor takes arguments and allows the initialization of objects with specific values.
+
+### Access Modifiers
+
+11. **What are access specifiers?**
+    - **Answer:** Access specifiers define the accessibility of class members. In C++, the main access specifiers are `private`, `protected`, and `public`.
+
+12. **What is the difference between private, public, and protected access specifiers?**
+    - **Answer:** 
+      - `private`: Members are accessible only within the class.
+      - `public`: Members are accessible from outside the class.
+      - `protected`: Members are accessible within the class and by derived class instances.
+
+### Member Functions and Data Members
+
+13. **What are member functions?**
+    - **Answer:** Member functions are functions defined within a class that operate on the objects of that class.
+
+14. **What are data members?**
+    - **Answer:** Data members are variables defined within a class that hold the data attributes of the objects.
+
+15. **How do you define a member function inside a class?**
+    - **Answer:** A member function is defined within the class body.
+      ```cpp
+      class ClassName {
+      public:
+          void functionName() {
+              // Function implementation
+          }
+      };
+      ```
+
+16. **How do you define a member function outside a class?**
+    - **Answer:** A member function is defined outside the class body using the scope resolution operator `::`.
+      ```cpp
+      void ClassName::functionName() {
+          // Function implementation
+      }
+      ```
+
+17. **What is a static member in a class?**
+    - **Answer:** A static member belongs to the class rather than any object instance. It is shared by all objects of the class and is declared using the `static` keyword.
+
+### Inheritance
+
+18. **What is inheritance in OOP?**
+    - **Answer:** Inheritance is a feature of OOP that allows a class to inherit properties and methods from another class. The class that inherits is called the derived class, and the class from which it inherits is called the base class.
+
+19. **What are the types of inheritance supported in C++?**
+    - **Answer:** The types of inheritance in C++ are:
+      - Single inheritance
+      - Multiple inheritance
+      - Multilevel inheritance
+      - Hierarchical inheritance
+      - Hybrid inheritance
+
+20. **How do you implement inheritance in C++?**
+    - **Answer:** Inheritance is implemented using the colon `:` followed by the access specifier and the base class name.
+      ```cpp
+      class DerivedClass : public BaseClass {
+          // Derived class members
+      };
+      ```
+
+21. **What is the purpose of the `protected` access specifier in inheritance?**
+    - **Answer:** The `protected` access specifier allows members to be accessible in derived classes while remaining inaccessible from outside the class.
+
+22. **What is the difference between public, private, and protected inheritance?**
+    - **Answer:** 
+      - `public` inheritance: Public and protected members of the base class become public and protected members of the derived class.
+      - `private` inheritance: Public and protected members of the base class become private members of the derived class.
+      - `protected` inheritance: Public and protected members of the base class become protected members of the derived class.
+
+### Polymorphism
+
+23. **What is polymorphism?**
+    - **Answer:** Polymorphism is the ability of different objects to be accessed through the same interface, allowing one interface to be used for a general class of actions. It can be achieved through function overloading, operator overloading, and inheritance.
+
+24. **What is the difference between compile-time and run-time polymorphism?**
+    - **Answer:** 
+      - Compile-time polymorphism: Achieved through function overloading and operator overloading. It is resolved at compile time.
+      - Run-time polymorphism: Achieved through inheritance and virtual functions. It is resolved at runtime.
+
+25. **How is polymorphism achieved in C++?**
+    - **Answer:** Polymorphism in C++ is achieved through function overloading, operator overloading, and inheritance using virtual functions.
+
+26. **What is a virtual function?**
+    - **Answer:** A virtual function is a member function declared in the base class using the `virtual` keyword and is overridden in the derived class. It allows for dynamic linkage (run-time polymorphism).
+
+27. **What is a pure virtual function?**
+    - **Answer:** A pure virtual function is a virtual function with no implementation in the base class. It is declared by assigning `0` to the function signature and makes the class abstract.
+      ```cpp
+      class BaseClass {
+      public:
+          virtual void functionName() = 0;
+      };
+      ```
+
+### Encapsulation and Abstraction
+
+28. **What is encapsulation?**
+    - **Answer:** Encapsulation is the concept of bundling data and methods that operate on the data within a single unit, a class. It restricts direct access to some of the object's components, which can prevent the accidental modification of data.
+
+29. **How is encapsulation implemented in C++?**
+    - **Answer:** Encapsulation is implemented using classes where data members are kept private, and public getter and setter functions are provided to access and modify the data.
+
+30. **What is abstraction?**
+    - **Answer:** Abstraction is the concept of hiding the complex implementation details of a system and showing only the necessary features. It focuses on what an object does rather than how it does it.
+
+31. **How do you achieve abstraction in C++?**
+    - **Answer:** Abstraction in C++ is achieved using abstract classes (classes with pure virtual functions) and interfaces.
+
+### Miscellaneous
+
+32. **What is the `this` pointer in C++?**
+    - **Answer:** The `this` pointer is an implicit pointer available inside non-static member functions of a class. It points to the object for which the member function is called.
+
+33. **What is operator overloading?**
+    - **Answer:** Operator overloading allows you to define or change the behavior of operators for user-defined types. It enables operators to work with class objects.
+
+34. **What is the use of the `friend` keyword in C++?**
+    - **Answer:** The `friend` keyword allows a function or another class to access private and protected members of the class in which it is declared as a friend.
+
+35. **Can you explain the concept of a copy constructor?**
+    - **Answer:** A copy constructor is a special constructor used to create a new object as a copy of an existing object. It is defined with a reference to an object of the same class.
+      ```cpp
+      ClassName(const ClassName &obj) {
+          // Copy constructor implementation
+      }
+      ```
+
+36. **What is the difference between deep copy and shallow copy?**
+    - **Answer:** 
+      - Shallow copy: Copies all member values from one object to another, including pointers,
+
+ which can lead to issues if the pointer points to a shared resource.
+      - Deep copy: Creates a copy of dynamically allocated memory pointed to by the pointers, ensuring each object has its own independent copy of the data.
+
+37. **What are getter and setter functions, and why are they used?**
+    - **Answer:** Getter and setter functions are used to access and modify private data members of a class. They provide controlled access and can include validation logic.
